@@ -1,42 +1,173 @@
-.center-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    height: 100vh;
-    gap: 23px ;
-    /* overflow-x: auto; */
-    /* scroll-behavior: smooth; */
-}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
-.btn-main {
-    z-index: 2;
-    width: 218px;
-    height: 700px;
-    border: 2px solid rgb(0, 0, 0) ;
-    border-radius: 16px;
-    cursor: pointer;
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0) ;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 600;
-    font-size: 1.4rem;
-    transition: 0.3s;
+* {
+    box-sizing: border-box;
 }
-
-.btn-main:hover {
-    /* color: rgb(255, 255, 255);
-    background-color: rgb(58,58,58);  */
-    transform: scale(1.3);
-    z-index: 3;
-} 
 
 body {
     margin: 0;
     overflow-x: hidden;
+    background-color: #f0f2f5;
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+}
+
+h1.title {
+    text-align: center;
+    color: #1a1a1a;
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(1.1rem, 3vw, 1.8rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin: 0;
+    padding: 32px 0 8px;
+}
+
+p.subtitle {
+    text-align: center;
+    color: #8a8f98;
+    font-size: clamp(0.75rem, 2vw, 0.9rem);
+    font-weight: 400;
+    margin: 0 0 8px;
+    letter-spacing: 0.01em;
+}
+
+.center-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    min-height: calc(100vh - 100px);
+    padding: 24px 24px 32px;
+}
+
+.btn-main {
+    z-index: 2;
+    width: 170px;
+    height: 520px;
+    border: 1px solid #e2e5ea;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: #ffffff;
+    color: #1a1a1a;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 0.85rem;
+    transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    overflow: hidden;
+    box-shadow:
+        0 1px 3px rgba(0, 0, 0, 0.06),
+        0 4px 16px rgba(0, 0, 0, 0.06);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.btn-main:hover {
+    transform: translateY(-8px);
+    z-index: 3;
+    border-color: #d0d4db;
+    box-shadow:
+        0 8px 24px rgba(0, 0, 0, 0.10),
+        0 24px 48px rgba(0, 0, 0, 0.08);
+    background-color: #fafafa;
+}
+
+.btn-main:active {
+    transform: translateY(-2px);
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Glitch line on hover */
+.btn-main .glitch-line {
+    position: absolute;
+    top: 0; left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255, 0.5), transparent);
+    transition: left 0.5s ease;
+    pointer-events: none;
+}
+
+.btn-main:hover .glitch-line {
+    left: 160%;
+}
+
+.logo-wrap {
+    background-color: transparent;
+    border: none;
+    border-radius: 16px;
+    padding: 18px;
+    width: 76%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .btn-main img {
-    width:78%;
+    width: 100%;
     height: auto;
+    display: block;
+}
+
+.btn-label {
+    color: #4a4f5a;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    transition: color 0.2s ease;
+}
+
+.btn-main:hover .btn-label {
+    color: #1a1a1a;
+}
+
+/* Responsive: tablet */
+@media (max-width: 900px) {
+    .btn-main {
+        width: 145px;
+        height: 400px;
+    }
+}
+
+/* Responsive: mobile */
+@media (max-width: 600px) {
+    .center-btn {
+        gap: 12px;
+        padding: 16px 14px 28px;
+        min-height: calc(100vh - 90px);
+    }
+
+    .btn-main {
+        width: calc(50% - 10px);
+        height: 190px;
+        border-radius: 16px;
+        gap: 12px;
+    }
+
+    .logo-wrap {
+        width: 68%;
+        padding: 12px;
+        border-radius: 12px;
+        border: none;
+        background-color: transparent;
+    }
+
+    h1.title {
+        padding-top: 24px;
+    }
+}
+
+/* Responsive: very small */
+@media (max-width: 360px) {
+    .btn-main {
+        width: 100%;
+        height: 160px;
+    }
 }

@@ -1,23 +1,51 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Web Clicker</title>
         <link rel="stylesheet" href="web.css">
     </head>
-    <body style="background-color: rgb(0, 0, 0);">
+    <body>
+        <h1 class="title">Quick Access</h1>
+        <p class="subtitle">Your favourite apps, one click away</p>
         <div class="center-btn" id="slider">
-            <button class="btn-main" onclick="goNetflix()"><img src="netflixlogo.png" alt="Netflix"></button>
-            <button class="btn-main" onclick="goGoogle()"><img src="Google_2015_logo.svg.png" alt="Google"></button>
-            <button class="btn-main" onclick="goChatgpt()"><img src="1681038472chatgpt-logo.png" alt="Chatgpt"></button>
-            <button class="btn-main" onclick="goGemini()"><img src="gemini-Photoroom.png" alt="Gemini"></button>
-            <button class="btn-main" onclick="goClaude()"><img src="Claude_AI_logo.svg.png" alt="Claude"></button>
-            <button class="btn-main" onclick="goYoutube()"><img src="YouTube_Logo_2017.svg.png" alt="Youtube"></button>
-            <button class="btn-main" onclick="goDeepseek()"><img src="DeepSeek_logo.svg.png" alt="DeepSeek"></button>
+            <button class="btn-main" onclick="goNetflix()">
+                <div class="glitch-line"></div>
+                <div class="logo-wrap"><img src="netflixlogo.png" alt="Netflix"></div>
+                <span class="btn-label">Netflix</span>
+            </button>
+            <button class="btn-main" onclick="goGoogle()">
+                <div class="glitch-line"></div>
+                <div class="logo-wrap"><img src="Google_2015_logo.svg.png" alt="Google"></div>
+                <span class="btn-label">Google</span>
+            </button>
+            <button class="btn-main" onclick="goChatgpt()">
+                <div class="glitch-line"></div>
+                <div class="logo-wrap"><img src="1681038472chatgpt-logo.png" alt="Chatgpt"></div>
+                <span class="btn-label">ChatGPT</span>
+            </button>
+            <button class="btn-main" onclick="goGemini()">
+                <div class="glitch-line"></div>
+                <div class="logo-wrap"><img src="gemini-Photoroom.png" alt="Gemini"></div>
+                <span class="btn-label">Gemini</span>
+            </button>
+            <button class="btn-main" onclick="goClaude()">
+                <div class="glitch-line"></div>
+                <div class="logo-wrap"><img src="Claude_AI_logo.svg.png" alt="Claude"></div>
+                <span class="btn-label">Claude</span>
+            </button>
+            <button class="btn-main" onclick="goYoutube()">
+                <div class="glitch-line"></div>
+                <div class="logo-wrap"><img src="YouTube_Logo_2017.svg.png" alt="Youtube"></div>
+                <span class="btn-label">YouTube</span>
+            </button>
+            <button class="btn-main" onclick="goDeepseek()">
+                <div class="glitch-line"></div>
+                <div class="logo-wrap"><img src="DeepSeek_logo.svg.png" alt="DeepSeek"></div>
+                <span class="btn-label">DeepSeek</span>
+            </button>
         </div>
-        <script src="web.js"></script>  
+        <script src="web.js"></script>
     </body>
 </html>
-
-
-
-
