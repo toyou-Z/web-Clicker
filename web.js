@@ -36,5 +36,5 @@ function goDeepseek() {
 }
 
 function goSpotify() {
-    window.open("https://open.spotify.com/" , "_blank")
+    window.open("https://www.spotify.com" , "_blank")
 }
