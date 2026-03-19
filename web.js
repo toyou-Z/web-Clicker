@@ -34,3 +34,7 @@ function goYoutube() {
 function goDeepseek() {
     window.open("https://www.deepseek.com/en/" , "_blank")
 }
+
+function goSpotify() {
+    window.open("https://open.spotify.com/" , "_blank")
+}
